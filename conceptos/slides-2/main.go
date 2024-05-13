@@ -17,11 +17,13 @@ func main() {
 	//fmt.Println("tamaño pets:", len(pets))
 	//fmt.Println("capacidad pets:", cap(pets))
 
-	pets := make([]string, 0, 3)
-	pets = append(pets, "🦑", "🦆", "🦖")
+	//pets := []string{"🦂", "🦉"}
+	//pets := make([]string, 0, 3)
+	//pets = append(pets, "🦑", "🦆", "🦖")
+	pets := []string{}
 
 	fmt.Println("pets:", pets)
 	fmt.Println("tamaño pets:", len(pets))
-	fmt.Println("capacidad pets:", cap(pets))
+	fmt.Println("valor cero:", pets == nil)
 
 }
