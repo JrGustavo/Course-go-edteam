@@ -1,5 +1,9 @@
 package main
 
+import (
+	"time"
+)
+
 // file types
 
 const (
@@ -23,3 +27,31 @@ const (
 	jpg = ".jpg"
 	gif = ".gif"
 )
+
+type file struct {
+	name             string
+	fileType         int
+	isDir            bool
+	isHidden         bool
+	userName         string
+	groupName        string
+	size             int64
+	modificationTime time.Time
+	mode             string
+}
+
+type styleFileType struct {
+	icon   string
+	color  string
+	symbol string
+}
+
+var mapStyleByFileType = map[int]styleFileType{
+
+	fileRegular:    {icon: ""},
+	fileDirectory:  {icon: "", color, symbol: "/"},
+	fileExecutable: {},
+	fileCompress:   {},
+	fileImage:      {},
+	fileLink:       {},
+}
